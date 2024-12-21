@@ -71,7 +71,7 @@
             cumque?
         </div>
         <div class="input">
-            <form onsubmit=consoleUp()>
+            <form onsubmit=consoleUp(event)>
                 <input type="text" id="consoleInput" placeholder="Enter command">
             </form>
         </div>
@@ -124,9 +124,17 @@
         </div>
     </section>
     <section class="links">
-        <div>192.168.8.111</div>
-        <div>192.168.8.111</div>
-        <div>192.168.8.111</div>
+        <div onclick="copyToClipboard('192.168.8.111', event)"><img src="media/svg/server.svg" alt="IP Address">
+            <div>192.168.8.111</div>
+            <div class="status" id="server"></div>
+        </div>
+        <div onclick="copyToClipboard('192.168.8.128', event)"><img src="media/svg/FTP.svg" alt="FTP">
+            <div>192.168.8.128</div>
+            <div class="status" id="ftp"></div>
+        </div>
+        <div><img src="media/svg/github-mark.svg" alt="GitHub">
+            <div><a href="https://github.com/Igorroo">Igorroo</a></div>
+        </div>
     </section>
 </body>
 

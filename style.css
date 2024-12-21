@@ -44,23 +44,36 @@ section {
 .links {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: nowrap;
     flex-direction: column;
-    overflow-y: scroll;
+    overflow-y: hidden;
     height: 200px;
     padding: 15px;
+    padding-left: 4em;
 }
 
 .links>div {
-    font-size: larger;
-    background-color: lightblue;
-    padding: 0.5em;
-    padding-left: 2em;
-    padding-right: 2em;
-    border-radius: 15px;
-    margin: 0.5em;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.links>div>img,
+.links>div>div {
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0.25em;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
 
 .console {
     display: flex;
