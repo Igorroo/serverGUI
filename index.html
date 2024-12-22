@@ -23,50 +23,69 @@
         </div>
     </section>
     <section class="settings">
-        <input type="range" name="debug" id="debug">
+        <!-- <input type="range" name="debug" id="debug"> -->
+        <div>
+            <button class="status">
+                <img src="media/svg/power.svg" alt="">
+                <div>Stopped</div>
+            </button>
     </section>
     <section class="info">
-        <div class="temp">
-            <div class="numbers">
-                <div class="num1">
-                    <p>60</p>
-                    <p class="zero">0</p>
+        <div id="gauge1">
+            <div class="temp">
+                <div class="numbers">
+                    <div class="num1">
+                        <p>60</p>
+                        <p class="zero">0</p>
+                    </div>
+                    <div class="num2">
+                        <p>80</p>
+                        <p>20</p>
+                    </div>
+                    <div class="num3">
+                        <p>40</p>
+                        <p>99</p>
+                    </div>
                 </div>
-                <div class="num2">
-                    <p>80</p>
-                    <p>20</p>
-                </div>
-                <div class="num3">
-                    <p>40</p>
-                    <p>99</p>
-                </div>
+                <!-- <div class="dot"></div> -->
+                <div class="gauge" id="temperture"></div>
             </div>
-            <!-- <div class="dot"></div> -->
-            <div class="gauge" id="temperture"></div>
+            <div class="temperature">42 C</div>
+            <div class="name">Core Temp.</div>
         </div>
-        <div class="memory">
-            <div class="columnGauge" id="memory"></div>
-        </div>
-        <div class="storage">
-            <div class="columnGauge" id="storage"></div>
-        </div>
-        <div class="cpu">
-            <div class="numbers2">
-                <div class="num1">
-                    <p>60%</p>
-                    <p class="zero">0%</p>
-                </div>
-                <div class="num2">
-                    <p>80%</p>
-                    <p>20%</p>
-                </div>
-                <div class="num3">
-                    <p>40%</p>
-                    <p>99%</p>
-                </div>
+        <div id="col1">
+            <div class="memory">
+                <div class="columnGauge" id="memory"></div>
             </div>
-            <!-- <div class="dot"></div> -->
-            <div class="gauge" id="cpuUsage"></div>
+            <div class="name">Memory</div>
+        </div>
+        <div id="col2">
+            <div class="storage">
+                <div class="columnGauge" id="storage"></div>
+            </div>
+            <div class="name">Storage</div>
+        </div>
+        <div id="gauge2">
+            <div class="cpu">
+                <div class="numbers2">
+                    <div class="num1">
+                        <p>60%</p>
+                        <p class="zero">0%</p>
+                    </div>
+                    <div class="num2">
+                        <p>80%</p>
+                        <p>20%</p>
+                    </div>
+                    <div class="num3">
+                        <p>40%</p>
+                        <p>99%</p>
+                    </div>
+                </div>
+                <!-- <div class="dot"></div> -->
+                <div class="gauge" id="cpuUsage"></div>
+            </div>
+            <div class="cpuUsage">33%</div>
+            <div class="name">Cpu Usage</div>
         </div>
     </section>
     <section class="links">

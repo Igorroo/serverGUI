@@ -4,7 +4,6 @@ const storage = document.querySelector("#storage");
 const temperature = document.querySelector("#temperture");
 const cpuUsage = document.querySelector("#cpuUsage");
 const RANGE = document.querySelector("#debug");
-let value = document.querySelector("#debug").value;
 let log = document.querySelector(".log");
 log.scrollTop = log.scrollHeight;
 
@@ -37,3 +36,4 @@ function copyToClipboard(text, event) {
         console.error('Could not copy text: ', err);
     });
 }
+let value = document.querySelector("#debug").value;

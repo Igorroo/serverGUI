@@ -13,7 +13,6 @@ body {
     background-color: #f0f0f3;
     display: grid;
     grid-template-columns: 3fr 2fr;
-    grid-template-rows: 20em 10em;
     gap: 30px;
     font-family: 'NType82-Regular', sans-serif;
 }
@@ -21,31 +20,6 @@ body {
 @media (max-width: 1000px) {
     body {
         grid-template-columns: 1fr;
-    }
-
-    .info {
-        flex-direction: column;
-
-    }
-
-    .temp {
-        height: 100px;
-        width: 100px;
-    }
-
-    .memory {
-        height: 100px;
-        aspect-ratio: 1 / 4;
-    }
-
-    .storage {
-        height: 100px;
-        aspect-ratio: 1 / 4;
-    }
-
-    .cpu {
-        height: 100px;
-        width: 100px;
     }
 }
 
@@ -56,7 +30,7 @@ body {
     flex-wrap: wrap;
     flex-direction: row;
     padding: 15px;
-    height: 200px;
+    height: 240px;
 }
 
 section {
@@ -73,7 +47,7 @@ section {
     flex-wrap: nowrap;
     flex-direction: column;
     overflow-y: hidden;
-    height: 200px;
+    height: 240px;
     padding: 15px;
     padding-left: 4em;
 }
@@ -108,7 +82,7 @@ a {
     display: flex;
     flex-direction: column;
     font-family: consolas;
-    /* height: 20lh; */
+    height: 20lh;
 }
 
 .log {
@@ -207,10 +181,27 @@ input:active {
     width: 100%;
     height: 50%;
     border-radius: 50px;
-    background-color: coral;
+    background-color: lightskyblue;
     box-shadow:
-        6px 6px 6px rgba(0, 0, 0, 0.25) inset,
+        6px 6px 6px rgba(0, 0, 0, 0.1) inset,
         -6px -6px 6px rgba(255, 255, 255, 0.5) inset;
+}
+
+.info>div {
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.name {
+    display: flex;
+    font-size: larger;
+    color: rgba(0, 0, 0, 0.75);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: center;
 }
 
 .numbers>div {
@@ -283,7 +274,7 @@ input:active {
 }
 
 .gauge {
-    background-color: rgba(0, 0, 0, 0.377);
+    background: linear-gradient(0deg, #ff000064, #00000000, #00000000);
     z-index: 100;
     border-radius: 10px;
     position: absolute;
@@ -305,10 +296,30 @@ input:active {
     background-color: red;
 }
 
+.settings {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 40px;
+    padding: 40px;
+}
 
-@media (max-width: 900px) {
+.temperature,
+.cpuUsage {
+    display: none;
+}
+
+@media (max-width: 1000px) {
     .info {
         flex-direction: column;
+    }
+
+    .temperature,
+    .cpuUsage {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: x-large;
     }
 
     .column {
@@ -318,4 +329,64 @@ input:active {
         box-shadow: none;
         justify-content: space-around;
     }
+
+    .settings {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .info {
+        flex-direction: row;
+    }
+
+    .temp {
+
+        display: none;
+    }
+
+    .memory {
+        height: 200px;
+        aspect-ratio: 1 / 4;
+    }
+
+    .storage {
+        height: 200px;
+        aspect-ratio: 1 / 4;
+    }
+
+    .cpu {
+        display: none;
+    }
+}
+
+
+
+.settings>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.settings>div>button {
+    padding: 10px 30px 10px 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: #f0f0f3;
+    box-shadow:
+        6px 6px 10px rgba(174, 174, 192, 0.40),
+        -6px -6px 10px white;
+    font-family: 'NType82-Regular', sans-serif;
+    font-size: large;
+    cursor: pointer;
+    transition-property: box-shadow;
+    transition-duration: 0.1s;
+}
+
+.settings>div>button:active {
+    box-shadow:
+        3px 3px 6px rgba(174, 174, 192, 0.40),
+        -3px -3px 6px white;
 }
