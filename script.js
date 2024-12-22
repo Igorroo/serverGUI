@@ -5,11 +5,15 @@ const temperature = document.querySelector("#temperture");
 const cpuUsage = document.querySelector("#cpuUsage");
 const RANGE = document.querySelector("#debug");
 let value = document.querySelector("#debug").value;
+let log = document.querySelector(".log");
+log.scrollTop = log.scrollHeight;
 
 function consoleUp(event) {
     console.log(CONSOLEINPUT.value);
     event.preventDefault();
+    document.querySelector(".log>ul").innerHTML += "<li>" + CONSOLEINPUT.value + "</li>"
     CONSOLEINPUT.value = "";
+    log.scrollTop = log.scrollHeight;
 }
 
 RANGE.addEventListener('input', function (event) {
