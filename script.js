@@ -15,7 +15,7 @@ function consoleUp(event) {
     log.scrollTop = log.scrollHeight;
 }
 
-RANGE.addEventListener('input', function (event) {
+RANGE.addEventListener('input', function () {
     value = document.querySelector("#debug").value;
     memory.style.height = value + "%";
     storage.style.height = (value * -1) + 100 + "%";
