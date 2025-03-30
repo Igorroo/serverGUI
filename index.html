@@ -5,20 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-    <script src="console.js" defer></script>
+    <script src="script.js" defer></script><!--js for frontend thingies like copy to clipboard etc.-->
+    <script src="console.js" defer></script><!--TODO js for console commands(currently only backend->frontend )-->
+    <script src="gauge.js" defer></script><!--TODO js for gauges-->
+    <script src="status.js" defer></script><!--TODO js for status-->
     <title>Admin</title>
 </head>
 
 <body>
     <section class="console">
+        <div class="alert" id="alert"></div>
         <div class="log">
             <ul>
 
             </ul>
         </div>
         <div class="input">
-            <form onsubmit=consoleUp(event)>
+            <form onsubmit=getCommand(event)>
                 <input type="text" id="consoleInput" placeholder="Enter command">
             </form>
         </div>
